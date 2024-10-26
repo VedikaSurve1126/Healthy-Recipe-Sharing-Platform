@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Wholesome Bites</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #A8E6CF;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #a7a397;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #8d8a82;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: black;
+        }
+    </style>
+    <script>
+        function showThankYouPopup(event) {
+            event.preventDefault(); // Prevent form submission to demonstrate popup
+            
+            // Display popup
+            alert('Thank you for your feedback! Your response has been recorded.');
+
+            // Here you can submit the form after showing the popup if needed
+            // document.getElementById('contactForm').submit();
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Contact Us</h1>
+        </header>
+
+        <section>
+            <p>We’d love to hear from you! Whether you have questions, feedback, or need help, feel free to reach out to us.</p>
+            
+            <form id="feedback" action="/feedback" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Submit</button>
+            </form>
+            
+            <p>&copy; 2024 Wholesome Bites. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

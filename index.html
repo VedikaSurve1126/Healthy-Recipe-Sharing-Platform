@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark bg-success fixed-top">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <a class="navbar-brand" href="#" style="font-family: 'Trebuchet MS', Arial, sans-serif; color: white;">
+                <img src="images/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                Wholesome Bites
+            </a>
+
+            <div class="d-flex align-items-center ms-auto nav-links">
+                <a href="HomePage/Login.html" target="_blank" class="nav-link text-light mx-2">Login</a>
+                <a href="HomePage/SignUp.html" target="_blank" class="nav-link text-light mx-2">Sign Up</a>
+                <a href="MainPage/upload.html" target="_blank" class="btn btn-light mx-2">Upload Recipe</a>
+                <a href="MainPage/recipe.html" target="_blank" class="btn btn-light mx-2">View all Recipes</a>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+                aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-success" tabindex="-1" id="offcanvasDarkNavbar"
+                aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Navigation Bar</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Trending Recipes</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Cuisines
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-success">
+                                <li><a class="dropdown-item" href="#">Indian</a></li>
+                                <li><a class="dropdown-item" href="#">Italian</a></li>
+                                <li><a class="dropdown-item" href="#">American</a></li>
+                                <li><a class="dropdown-item" href="#">Japanese</a></li>
+                                <li><a class="dropdown-item" href="#">Mexican</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Meals
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-success">
+                                <li><a class="dropdown-item" href="#">Breakfast</a></li>
+                                <li><a class="dropdown-item" href="#">Lunch</a></li>
+                                <li><a class="dropdown-item" href="#">Dinner</a></li>
+                                <li><a class="dropdown-item" href="#">Salads</a></li>
+                                <li><a class="dropdown-item" href="#">Desserts</a></li>
+                                <li><a class="dropdown-item" href="#">Drinks</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex mt-3" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-light" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-5 pt-5">
+        <div class="row">
+            <!-- Left Sidebar with small sections -->
+            <div class="col-md-4">
+                <!-- Recipe of the Day Section -->
+                <div class="recipe-of-the-day mb-4">
+                    <h2>Recipe of the Day</h2>
+                    <div class="recipe-card">
+                        <img src="images/chickpea-curry-chhole.webp" alt="Recipe of the Day" class="img-fluid">
+                        <h3 class="recipe-title mt-2">Chhole (Chickpea Curry)</h3>
+                        <p>A refreshing and healthy salad packed with grilled vegetables.</p>
+                        <a href="recipe-detail.html" class="btn btn-light btn-sm">View Full Recipe</a>
+                    </div>
+                </div>
+
+                <!-- Trending Recipes Section -->
+                <div class="trending-recipes">
+                    <h2>Trending Recipes</h2>
+                    <ol>
+                        <li>
+                            <a href="recipe-detail.html" class="text-decoration-none">Avocado Toast</a>
+                        </li>
+                        <li class="mt-2">
+                            <a href="recipe-detail.html" class="text-decoration-none">Smoothie Bowl</a>
+                        </li>
+                        <li class="mt-2">
+                            <a href="recipe-detail.html" class="text-decoration-none">Quinoa Salad</a>
+                        </li>
+                    </ol>
+                    <a href="trending.html" class="btn btn-light btn-sm mt-2">View All Trending Recipes</a>
+                </div>
+            </div>
+
+            <!-- Main Hero Section -->
+            <div class="col-md-8">
+                <div class="hero-section text-center">
+                    <h1 class="hero-title">Discover Delicious & Healthy Recipes</h1>
+                    <form class="d-flex justify-content-center mt-3">
+                        <input class="form-control me-2 search-bar" type="search" placeholder="Search for recipes..."
+                            aria-label="Search">
+                        <button class="btn btn-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popular Categories Section -->
+<div class="col-md-4">
+    <div class="popular-categories mt-4">
+        <div class="row">
+            <div class="col">
+                <div class="category-card mb-3">
+                    <img src="images/vegfood.jpg" alt="Breakfast" class="img-fluid">
+                    <h4>VEG MEALS</h4>
+                    <a href="vegrecipes.html" class="btn btn-success btn-sm mt-2">View Recipes</a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="category-card mb-3">
+                    <img src="images/nonvegfood.jpg" alt="Lunch" class="img-fluid">
+                    <h4>NON-VEG MEALS</h4>
+                    <a href="nonvegrecipes.html" class="btn btn-success btn-sm mt-2">View Recipes</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Footer Section -->
+    <!-- Footer Section -->
+<footer class="bg-success text-light text-center py-3 mt-5">
+    <p>&copy; 2024 Wholesome Bites | 
+        <a href="/HomePage/AboutUs.html" class="text-light" target="_blank">About Us</a> | 
+        <a href="/HomePage/ContactUs.html" class="text-light" target="_blank">Contact Us</a>
+    </p>
+</footer>
+
+
+</body>
+
+</html>

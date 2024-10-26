@@ -1,0 +1,92 @@
+body {
+    background-color: #f8f9fa;
+    margin: 0;
+    font-family: 'Arial', sans-serif; /* Fallback font */
+}
+
+.nav-links {
+    margin-right: 10px;
+}
+
+.card {
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition for hover effects */
+    margin: 1rem; /* Spacing between cards */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Prevent overflow */
+    background-color: white; /* Card background */
+    border: 1px solid #dee2e6; /* Light border for the card */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow effect on hover */
+}
+
+.card-img-top {
+    border-top-left-radius: 10px; /* Rounded corners for image */
+    border-top-right-radius: 10px; /* Rounded corners for image */
+    height: 200px; /* Fixed height for uniformity */
+    object-fit: cover; /* Ensures image covers the area */
+}
+
+.card-body {
+    padding: 1.5rem; /* Padding for text readability */
+}
+
+.container {
+    padding-top: 80px; /* Space under the navbar */
+}
+
+h1 {
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    color: #007bff; /* Header color */
+    margin-bottom: 20px; /* Space below the header */
+}
+
+.nav-tabs .nav-link {
+    border: none; /* Remove border */
+    color: #007bff; /* Tab link color */
+}
+
+.nav-tabs .nav-link.active {
+    background-color: #007bff; /* Active tab background */
+    color: white; /* Active tab text color */
+}
+
+.tab-content {
+    padding-top: 20px; /* Space above tab content */
+}
+
+/* Ensure cards use flexbox layout for wider appearance */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center cards */
+}
+
+/* Adjust widths for responsive design */
+.col-md-4 {
+    max-width: 300px; /* Set max width for cards */
+    flex: 1 0 30%; /* Cards take up to 30% width of the row */
+}
+
+/* Small devices (mobiles) */
+@media (max-width: 576px) {
+    .col-md-4 {
+        max-width: 100%; /* Full width on mobile */
+    }
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 577px) and (max-width: 768px) {
+    .col-md-4 {
+        max-width: 45%; /* Adjust width for tablets */
+    }
+}
+
+/* Large devices (desktops) */
+@media (min-width: 769px) {
+    .col-md-4 {
+        max-width: 30%; /* Adjust width for larger screens */
+    }
+}

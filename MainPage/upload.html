@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Recipe</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #A8E6CF;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+}
+
+h1 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Upload Recipe</h1>
+        <form id="recipe-form" action="/addRecipe" method="post">
+            <label for="recipe-name">Recipe Name:</label>
+            <input type="text" id="recipe-name" name="recipeName" required>
+
+            <label for="instructions">Instructions:</label>
+            <textarea id="instructions" name="instructions" rows="4" required></textarea>
+
+            <label for="cuisine">Cuisine:</label>
+            <select id="cuisine" name="cuisine" required>
+                <option value="Indian">Indian</option>
+                <option value="Italian">Italian</option>
+                <option value="American">American</option>
+                <option value="Japanese">Japanese</option>
+                <option value="Mexican">Mexican</option>
+                <option value="Chinese">Chinese</option>
+            </select>
+
+            <label for="category">Category:</label>
+            <select id="category" name="category" required>
+                <option value="veg">Vegetarian</option>
+                <option value="non-veg">Non-Vegetarian</option>
+            </select>
+
+            <button type="submit">Submit Recipe</button>
+        </form>
+    </div>
+</body>
+</html>

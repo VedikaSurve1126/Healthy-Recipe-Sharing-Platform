@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #A8E6CF; /* Light green background similar to homepage */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            width: 520px;
+            padding: 60px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            color: #388E3C; /* Darker green for header */
+            margin-bottom: 30px;
+            font-size: 26px;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px 18px;
+            margin: 12px 0;
+            border: 1px solid #BDBDBD;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px 18px;
+            background-color: #388E3C; /* Dark green button */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 12px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #2E7D32; /* Slightly darker on hover */
+        }
+
+        .toggle {
+            margin-top: 20px;
+            color: #388E3C; /* Green for the toggle text */
+            font-size: 14px;
+        }
+
+        .toggle span {
+            color: #FFD54F; /* Yellow for the clickable text */
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Wholesome Bites</h2>
+
+        <!-- Login Form -->
+        <div id="login">
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button id="loginButton">Login</button>
+            <p class="toggle">Don't have an account? <span onclick="location.href='signup.html'">Sign Up</span></p>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+
+</html>
